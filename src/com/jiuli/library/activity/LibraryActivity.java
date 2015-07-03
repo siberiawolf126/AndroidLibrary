@@ -1,5 +1,7 @@
 package com.jiuli.library.activity;
 
+import com.jiuli.library.utils.logger.Logger;
+
 import android.app.Activity;
 import android.os.Bundle;
 
@@ -9,6 +11,7 @@ public abstract class LibraryActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		Logger.d("ÂÞ´º»ª");
 	}
 
 	@Override
