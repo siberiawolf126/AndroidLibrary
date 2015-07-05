@@ -2,7 +2,11 @@ package com.jiuli.library.comm;
 
 import android.content.Context;
 
-public class LibraryGlobal {
+public abstract class LibraryGlobal {
 
 	public static Context mContext;
+	
+	
+	
+	
 }
