@@ -11,7 +11,7 @@ public abstract class LibraryActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		Logger.d("111111111111111");
+		Logger.d("111111111111111罗春华");
 	}
 
 	@Override
