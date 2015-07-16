@@ -15,6 +15,14 @@ public final class R {
         public static int slide_out_to_top=0x7f040003;
     }
     public static final class attr {
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int fontPath=0x7f010013;
         /**  BELOW HERE ARE DEPRECEATED. DO NOT USE. 
          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -170,21 +178,23 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int indicator_bg_top=0x7f020005;
     }
     public static final class id {
-        public static int both=0x7f070004;
-        public static int disabled=0x7f070005;
-        public static int fl_inner=0x7f07000d;
-        public static int flip=0x7f07000b;
+        public static int both=0x7f070005;
+        public static int calligraphy_tag_id=0x7f070004;
+        public static int disabled=0x7f070006;
+        public static int fl_inner=0x7f07000f;
+        public static int flip=0x7f07000c;
         public static int gridview=0x7f070000;
-        public static int manualOnly=0x7f070006;
-        public static int pullDownFromTop=0x7f070007;
-        public static int pullFromEnd=0x7f070008;
-        public static int pullFromStart=0x7f070009;
-        public static int pullUpFromBottom=0x7f07000a;
-        public static int pull_to_refresh_image=0x7f07000e;
-        public static int pull_to_refresh_progress=0x7f07000f;
-        public static int pull_to_refresh_sub_text=0x7f070011;
-        public static int pull_to_refresh_text=0x7f070010;
-        public static int rotate=0x7f07000c;
+        public static int manualOnly=0x7f070007;
+        public static int promt=0x7f07000e;
+        public static int pullDownFromTop=0x7f070008;
+        public static int pullFromEnd=0x7f070009;
+        public static int pullFromStart=0x7f07000a;
+        public static int pullUpFromBottom=0x7f07000b;
+        public static int pull_to_refresh_image=0x7f070010;
+        public static int pull_to_refresh_progress=0x7f070011;
+        public static int pull_to_refresh_sub_text=0x7f070013;
+        public static int pull_to_refresh_text=0x7f070012;
+        public static int rotate=0x7f07000d;
         public static int scrollview=0x7f070002;
         public static int viewpager=0x7f070003;
         public static int webview=0x7f070001;

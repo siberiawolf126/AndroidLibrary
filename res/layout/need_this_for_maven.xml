@@ -5,5 +5,11 @@
     android:orientation="vertical" >
     
     <!-- Need this for Maven, otherwise it doesn't build. I hate Maven. -->
-
+<TextView  
+            android:id="@+id/promt"  
+            android:layout_width="fill_parent"  
+            android:layout_height="wrap_content"  
+            android:scrollbars="vertical"  
+            android:singleLine="false"  
+            android:text="扫描中..."/>
 </LinearLayout>
