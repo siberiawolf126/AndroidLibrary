@@ -57,7 +57,7 @@ public abstract class LibraryApplication extends Application {
 		File cacheDir = StorageUtils.getOwnCacheDirectory(LibraryGlobal.mContext,getOwnCacheDirectory());
 		ImageLoaderConfiguration.Builder config = new ImageLoaderConfiguration.Builder(context);
 		config.memoryCacheExtraOptions(480, 800); // max width, max height，即保存的每个缓存文件的最大长宽
-		config.threadPoolSize(3);//�̳߳��ڼ��ص�����
+		config.threadPoolSize(3);//
 		config.threadPriority(Thread.NORM_PRIORITY - 2);
 		config.denyCacheImageMultipleSizesInMemory();
 		config.memoryCache(new UsingFreqLimitedMemoryCache(2 * 1024 * 1024)); // You can pass your own memory cache implementation/�����ͨ���Լ����ڴ滺��ʵ��
