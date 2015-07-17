@@ -2,6 +2,7 @@ package com.jiuli.library;
 
 import java.io.File;
 
+import android.annotation.TargetApi;
 import android.app.Application;
 import android.content.Context;
 import android.os.Build;
@@ -23,7 +24,8 @@ import com.nostra13.universalimageloader.utils.StorageUtils;
 
 public abstract class LibraryApplication extends Application {
 
-	@Override
+	@TargetApi(Build.VERSION_CODES.GINGERBREAD)
+    @Override
 	public void onCreate() {
 		// TODO Auto-generated method stub
 		
@@ -54,19 +56,19 @@ public abstract class LibraryApplication extends Application {
 		//  ImageLoaderConfiguration.createDefault(this);
 		File cacheDir = StorageUtils.getOwnCacheDirectory(LibraryGlobal.mContext,getOwnCacheDirectory());
 		ImageLoaderConfiguration.Builder config = new ImageLoaderConfiguration.Builder(context);
-		config.memoryCacheExtraOptions(480, 800); // max width, max height£¬¼´±£´æµÄÃ¿¸ö»º´æÎÄ¼şµÄ×î´ó³¤¿í
-		config.threadPoolSize(3);//Ïß³Ì³ØÄÚ¼ÓÔØµÄÊıÁ¿
+		config.memoryCacheExtraOptions(480, 800); // max width, max heightï¼Œå³ä¿å­˜çš„æ¯ä¸ªç¼“å­˜æ–‡ä»¶çš„æœ€å¤§é•¿å®½
+		config.threadPoolSize(3);//ï¿½ß³Ì³ï¿½ï¿½Ú¼ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½
 		config.threadPriority(Thread.NORM_PRIORITY - 2);
 		config.denyCacheImageMultipleSizesInMemory();
-		config.memoryCache(new UsingFreqLimitedMemoryCache(2 * 1024 * 1024)); // You can pass your own memory cache implementation/Äã¿ÉÒÔÍ¨¹ı×Ô¼ºµÄÄÚ´æ»º´æÊµÏÖ
+		config.memoryCache(new UsingFreqLimitedMemoryCache(2 * 1024 * 1024)); // You can pass your own memory cache implementation/ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½Ú´æ»ºï¿½ï¿½Êµï¿½ï¿½
 		config.diskCacheFileNameGenerator(new Md5FileNameGenerator());
 		config.memoryCacheSize(2 * 1024 * 1024); // 2MiB
 		config.diskCacheSize(50 * 1024 * 1024); // 50 MiB
 		config.tasksProcessingOrder(QueueProcessingType.LIFO);
-		config.discCacheFileCount(100); //»º´æµÄÎÄ¼şÊıÁ¿
-        config.discCache(new UnlimitedDiskCache(cacheDir));//×Ô¶¨Òå»º´æÂ·¾¶
+		config.discCacheFileCount(100); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½
+        config.discCache(new UnlimitedDiskCache(cacheDir));//ï¿½Ô¶ï¿½ï¿½å»ºï¿½ï¿½Â·ï¿½ï¿½
         config.defaultDisplayImageOptions(DisplayImageOptions.createSimple());
-        config.imageDownloader(new BaseImageDownloader(context, 5 * 1000, 30 * 1000));// connectTimeout (5 s), readTimeout (30 s)³¬Ê±Ê±¼ä
+        config.imageDownloader(new BaseImageDownloader(context, 5 * 1000, 30 * 1000));// connectTimeout (5 s), readTimeout (30 s)ï¿½ï¿½Ê±Ê±ï¿½ï¿½
 		config.writeDebugLogs(); // Remove for release app
 
 		// Initialize ImageLoader with configuration.
